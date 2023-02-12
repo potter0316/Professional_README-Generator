@@ -1,7 +1,7 @@
 // Creaded inquirer package from npm
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { rejects } = require('assert');
+const generateMarkdown  = require("./utils/generateMarkdown")
 // TODO: Create an array of questions for user input
 const questions =[
     {
@@ -11,7 +11,7 @@ const questions =[
       },
       {
         type: 'input',
-        message: 'Installation?',
+        message: 'Installation',
         name: 'password',
       },
       {
