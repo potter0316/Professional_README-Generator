@@ -35,9 +35,9 @@ const questions =[
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.createPromptModule(questions).then(function(userInput) {
+  inquirer.prompt(questions).then(function(userInput) {
    // Moved function to write README file inside of the function to initialize app
-    fs.writeToFile('newREADME.md', process.argv[2], (err) =>
+    fs.writeToFile('newREADME.md', generateMarkdown(userInput), (err) =>
     err ? console.error(err) : console.log('success!'));
     })
 }
