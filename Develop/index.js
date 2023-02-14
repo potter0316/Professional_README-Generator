@@ -1,7 +1,7 @@
 // Creaded inquirer package from npm
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { rejects } = require('assert');
+const generateMarkdown  = require("./utils/generateMarkdown")
 // TODO: Create an array of questions for user input
 const questions =[
     {
@@ -11,7 +11,7 @@ const questions =[
       },
       {
         type: 'input',
-        message: 'Installation?',
+        message: 'Installation',
         name: 'password',
       },
       {
@@ -31,12 +31,16 @@ const questions =[
       },
     ]
 
-// TODO: Create a function to write README file
-fs.writeToFile('newREADME.md', process.argv[2], (err) =>
-    err ? console.error(err) : console.log('success!'));
+
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer.prompt(questions).then(function(userInput) {
+   // Moved function to write README file inside of the function to initialize app
+    fs.writeToFile('newREADME.md', generateMarkdown(userInput), (err) =>
+    err ? console.error(err) : console.log('success!'));
+    })
+}
 
 // Function call to initialize app
 init();
