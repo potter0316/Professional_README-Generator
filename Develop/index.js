@@ -1,41 +1,57 @@
 // Creaded inquirer package from npm
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 // TODO: Create an array of questions for user input
 const questions = [
   {
     type: "input",
-    message: "Description",
-    name: "username",
+    message: "What is the title of your repository",
+    name: "title",
   },
   {
     type: "input",
-    message: "Installation",
-    name: "password",
+    message: "Please describe your project.",
+    name: "description",
   },
   {
     type: "input",
-    message: "Usage",
-    name: "confirm",
+    message: "What steps are needed to install the project?",
+    name: "installation",
   },
   {
     type: "input",
-    message: "Contributing",
-    name: "username",
+    message: "What is the expected output of the project?",
+    name: "usage",
+  },
+  {
+    type: "list",
+    message: "license",
+    name: "license",
+    choices: ["MIT", "GPLv2", "Apache", "GPLv3", "other"]
+  },
+  {
+    type: "input",
+    message: "Any sources to site?",
+    name: "contributing",
   },
   {
     type: "input",
     message: "Tests",
-    name: "password",
+    name: "tests",
+  },
+  {
+    type: "input",
+    message: "Tests",
+    name: "tests",
   },
 ];
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions).then(function (userInput) {
+  inquirer.prompt(questions).then(function(userInput) {
     // Moved function to write README file inside of the function to initialize app
-    fs.writeToFile("newREADME.md", generateMarkdown(userInput), (err) =>
+    fs.writeFile("newREADME.md", generateMarkdown(userInput), (err) =>
       err ? console.error(err) : console.log("success!")
     );
   });
