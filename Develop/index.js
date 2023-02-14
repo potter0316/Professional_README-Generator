@@ -31,12 +31,16 @@ const questions =[
       },
     ]
 
-// TODO: Create a function to write README file
-fs.writeToFile('newREADME.md', process.argv[2], (err) =>
-    err ? console.error(err) : console.log('success!'));
+
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer.createPromptModule(questions).then(function(userInput) {
+   // Moved function to write README file inside of the function to initialize app
+    fs.writeToFile('newREADME.md', process.argv[2], (err) =>
+    err ? console.error(err) : console.log('success!'));
+    })
+}
 
 // Function call to initialize app
 init();
