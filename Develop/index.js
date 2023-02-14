@@ -6,23 +6,39 @@ const generateMarkdown = require("./utils/generateMarkdown.js");
 const questions = [
   {
     type: "input",
-    message: "Description",
+    message: "What is the title of your repository",
+    name: "title",
+  },
+  {
+    type: "input",
+    message: "Please describe your project.",
     name: "description",
   },
   {
     type: "input",
-    message: "Installation",
+    message: "What steps are needed to install the project?",
     name: "installation",
   },
   {
     type: "input",
-    message: "Usage",
+    message: "What is the expected output of the project?",
     name: "usage",
   },
   {
+    type: "list",
+    message: "license",
+    name: "license",
+    choices: ["MIT", "GPLv2", "Apache", "GPLv3", "other"]
+  },
+  {
     type: "input",
-    message: "Contributing",
+    message: "Any sources to site?",
     name: "contributing",
+  },
+  {
+    type: "input",
+    message: "Tests",
+    name: "tests",
   },
   {
     type: "input",
@@ -34,9 +50,8 @@ const questions = [
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then(function(userInput) {
-    const markdownString = generateMarkdown(userInput)
     // Moved function to write README file inside of the function to initialize app
-    fs.writeFile("newREADME.md", markdownString, (err) =>
+    fs.writeFile("newREADME.md", generateMarkdown(userInput), (err) =>
       err ? console.error(err) : console.log("success!")
     );
   });
