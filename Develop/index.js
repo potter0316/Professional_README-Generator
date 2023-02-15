@@ -42,7 +42,7 @@ const questions = [
   },
   {
     type: "input",
-    message: "Tests",
+    message: "What tests need to be taken?",
     name: "tests",
   },
   {
