@@ -1,23 +1,26 @@
-# 1
-  ![badge](https://img.shields.io/github/languages/top/undefined/undefined)
-  <br> 
-  ![badge](https://img.shields.io/github/languages/count/undefined/undefined)
-  <br>
-  ![badge](https://img.shields.io/github/issues/undefined/undefined)
-  <br>
-  ![badge](https://img.shields.io/github/issues-closed/undefined/undefined)
-  <br>
-  ![badge](https://img.shields.io/github/last-commit/undefined/undefined)
-  <br>
+# Professional README Generator
   ![badge](https://img.shields.io/badge/license-MIT-important)
   
 ## Description
-2
+Using node and npm to create an app or projector that asks the user question about the readme which then turns into a README file
+## Table of Contents
+[Description](#description)
+[Installation](#installation)
+[Usage](#usage)
+[License](#license)
+[Contributing](#contributing)
+[Tests](#tests)
+[Questions](#questions)
+
 ## Installation
-3
+node and npm are required for this project
 ## Usage
-4
+When the user completes all the questions it will notify the user it is successfull and generate a newREADME file.
+## License
+MIT
 ## Contributing
-5
+User starer code from the UofM gitlab site
 ## Tests
-6
+To test the application open code is VS code. Open a terminal in vs code and enter 'node index.js/ Answer the following question provided and see the results!
+## Questions
+potter0316

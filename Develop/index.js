@@ -45,6 +45,12 @@ const questions = [
     message: "Tests",
     name: "tests",
   },
+  {
+    type: "link",
+    message: "Please enter your github username.",
+    name: "questions",
+  },
+
 ];
 
 // TODO: Create a function to initialize app
