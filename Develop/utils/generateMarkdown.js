@@ -1,27 +1,33 @@
 function generateMarkdown(data) {
   return `# ${data.title}
-  ![badge](https://img.shields.io/github/languages/top/${data.github}/${data.repo})
-  <br> 
-  ![badge](https://img.shields.io/github/languages/count/${data.github}/${data.repo})
-  <br>
-  ![badge](https://img.shields.io/github/issues/${data.github}/${data.repo})
-  <br>
-  ![badge](https://img.shields.io/github/issues-closed/${data.github}/${data.repo})
-  <br>
-  ![badge](https://img.shields.io/github/last-commit/${data.github}/${data.repo})
-  <br>
   ![badge](https://img.shields.io/badge/license-${data.license}-important)
   
 ## Description
 ${data.description}
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
 ## Installation
 ${data.installation}
 ## Usage
+![professional README](./assets/screenshotREADME.png)
 ${data.usage}
+## License
+${data.license}
 ## Contributing
 ${data.contributing}
 ## Tests
 ${data.tests}
+## Questions
+Any further questions? Contact information is below!
+${data.questions}
+${data.email}
 `
 }
 

@@ -42,9 +42,20 @@ const questions = [
   },
   {
     type: "input",
-    message: "Tests",
+    message: "What tests need to be taken?",
     name: "tests",
   },
+  {
+    type: "link",
+    message: "Please enter your github username.",
+    name: "questions",
+  },
+  {
+    type: "link",
+    message: "Please enter your email address",
+    name: "email",
+  }
+
 ];
 
 // TODO: Create a function to initialize app
