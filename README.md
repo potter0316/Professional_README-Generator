@@ -2,25 +2,27 @@
   ![badge](https://img.shields.io/badge/license-MIT-important)
   
 ## Description
-Using node and npm to create an app or projector that asks the user question about the readme which then turns into a README file
+The project is a professional README Generator. Using node and npm, the user creates their own README file by answering a series of question. After the user finishes answering the questions a professional README file will be created.
 ## Table of Contents
-[Description](#description)
-[Installation](#installation)
-[Usage](#usage)
-[License](#license)
-[Contributing](#contributing)
-[Tests](#tests)
-[Questions](#questions)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
-node and npm are required for this project
+To take full advantage of the project node and npm are required to be installed.
 ## Usage
-When the user completes all the questions it will notify the user it is successfull and generate a newREADME file.
+The user will answer all of the questions to create a professional README!
 ## License
 MIT
 ## Contributing
-User starer code from the UofM gitlab site
+User starter code from the UofM gitlab site. Also a thanks to MDN docs and W3Schools.
 ## Tests
-To test the application open code is VS code. Open a terminal in vs code and enter 'node index.js/ Answer the following question provided and see the results!
+To test the application open VS code. Open a terminal in VS code and enter node index.js. Answer the provided questions and see the results!
 ## Questions
-potter0316
+Any further questions? Contact information is below!
+potter0316@github.com
+potter0316@gmail.com

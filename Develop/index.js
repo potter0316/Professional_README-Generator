@@ -50,6 +50,11 @@ const questions = [
     message: "Please enter your github username.",
     name: "questions",
   },
+  {
+    type: "link",
+    message: "Please enter your email address",
+    name: "email",
+  }
 
 ];
 
